@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import net.bytebuddy.asm.Advice.This;
+
 
 public class AmazonHomePage {
 	
@@ -15,6 +15,11 @@ public class AmazonHomePage {
 	@FindBy(how=How.XPATH,using="//a[@id='nav-link-accountList']")
 	public WebElement signIn;
 	
+	@FindBy(how=How.ID,using="twotabsearchtextbox")
+	public WebElement itemSearchBox;
+	
+	@FindBy(how=How.XPATH,using="//input[@id='nav-search-submit-button']")
+	public WebElement itemSearchBtn;
 	
 	
 	public AmazonHomePage(WebDriver driver) {

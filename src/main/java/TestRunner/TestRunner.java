@@ -15,25 +15,19 @@ import StepDescription.LoginPageStepDescription;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features="src\\main\\java\\features", glue="StepDescription")
-public class TestRunner extends AbstractTestNGCucumberTests{
-	
-	
-	 @BeforeClass 
-	 public void openBrowser() throws FileNotFoundException, IOException 
-	 { 
-		 Base b=new Base(); 
-		 b.initializeBorwser(); 
-		 
-		
-	 }
-	 
-	 
-	 
-	 @AfterClass
-	 public void tearDown() {
+@CucumberOptions(features = "src\\main\\java\\features\\PlaceOrder.feature", glue = "StepDescription")
+public class TestRunner extends AbstractTestNGCucumberTests {
+
+	@BeforeClass
+	public void openBrowser() throws FileNotFoundException, IOException {
+		Base b = new Base();
+		b.initializeBorwser();
+
+	}
+
+	@AfterClass
+	public void tearDown() {
 		Base.driver.quit();
-	 }
-	 
-	
+	}
+
 }
